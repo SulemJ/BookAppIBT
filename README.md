@@ -51,9 +51,7 @@ An e-commerce storefront built with Next.js 15 (App Router), Zustand, and the Gu
 - **State Cleanup:** Successfully submitting an order purges the global Zustand cart state to prevent duplicate orders.
 - **Dynamic Confirmation:** Navigates via `next/navigation` to a dedicated `/confirmation` route, passing the securely generated `orderId` via search parameters.
 
-## Checkout & Performance Measurements
-
-_Note: The following metrics were captured during the local production build (`npm run build`)._
+##
 
 | Route            | Type             | Strategy                                                                                             |
 | :--------------- | :--------------- | :--------------------------------------------------------------------------------------------------- |
