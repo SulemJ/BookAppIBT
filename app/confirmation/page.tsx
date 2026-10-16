@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const instant = false; // Add this line to fix the error
+export const instant = false; 
 
 export default async function ConfirmationPage({ 
   searchParams 
@@ -11,7 +11,7 @@ export default async function ConfirmationPage({
 
   return (
     <main style={{ padding: "40px", maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
-      <div style={{ fontSize: "3rem", marginBottom: "10px" }}>☑️</div>
+      {/* <div style={{ fontSize: "3rem", marginBottom: "10px" }}>☑️</div> */}
       <h1 style={{ color: "green" }}>Order Confirmed!</h1>
       <p style={{ fontSize: "1.2rem", color: "#333", marginTop: "15px" }}>
         Thank you for your purchase. 

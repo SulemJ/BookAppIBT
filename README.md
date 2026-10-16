@@ -55,12 +55,12 @@ An e-commerce storefront built with Next.js 15 (App Router), Zustand, and the Gu
 
 _Note: The following metrics were captured during the local production build (`npm run build`)._
 
-| Route            | Type             | Build Time / Size | Strategy                                                                                             |
-| :--------------- | :--------------- | :---------------- | :--------------------------------------------------------------------------------------------------- |
-| `/` (Storefront) | Server / Dynamic | 88 kB             | Uses `instant = false` to allow non-blocking live catalog fetching while rendering the static shell. |
-| `/cart`          | Client           | 92 kB             | Bundles Zustand logic for instant state updates without network waterfalls.                          |
-| `/checkout`      | Client           | 85 kB             | Contains controlled form state and routing logic.                                                    |
-| `/confirmation`  | Server / Dynamic | 78 kB             | Awaits `searchParams` to render the exact order number server-side.                                  |
+| Route            | Type             | Strategy                                                                                             |
+| :--------------- | :--------------- | :--------------------------------------------------------------------------------------------------- |
+| `/` (Storefront) | Server / Dynamic | Uses `instant = false` to allow non-blocking live catalog fetching while rendering the static shell. |
+| `/cart`          | Client           | Bundles Zustand logic for instant state updates without network waterfalls.                          |
+| `/checkout`      | Client           | Contains controlled form state and routing logic.                                                    |
+| `/confirmation`  | Server / Dynamic | Awaits `searchParams` to render the exact order number server-side.                                  |
 
 ### CodeOps Optimizations Applied
 
