@@ -1,10 +1,12 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 import CartNav from "./CartNav";
 
 export const metadata: Metadata = {
-  title: "CodeOps Book Store",
-  description: "Browse books and manage your shopping cart.",
+  title: "BookNest | Your Online Bookstore",
+  description:
+    "Discover your next favorite book at BookNest. Browse books, explore categories, and shop online.",
 };
 
 export default function RootLayout({
