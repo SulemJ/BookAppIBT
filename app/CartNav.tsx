@@ -4,13 +4,15 @@ import Link from "next/link";
 import { useCartStore } from "../store/cartStore";
 
 export default function CartNav() {
-  const items = useCartStore((state) => state.items);
-  
+  const count = useCartStore((state) =>
+    state.items.reduce((sum, item) => sum + item.quantity, 0)
+  );
+
   return (
-    <nav style={{ display: "flex", gap: "20px" }}>
-      <Link href="/" style={{ textDecoration: "none", color: "#333" }}>Store</Link>
-      <Link href="/cart" style={{ textDecoration: "none", color: "blue", fontWeight: "bold" }}>
-        Cart ({items.length})
+    <nav className="flex gap-5">
+      <Link href="/">Store</Link>
+      <Link href="/cart" className="font-bold text-blue-600">
+        Cart ({count})
       </Link>
     </nav>
   );
