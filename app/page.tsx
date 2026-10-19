@@ -7,12 +7,14 @@ export default async function Home() {
 
   const res = await fetch("https://gutendex.com/books/?page=1");
   const data = await res.json();
+  const limitedResults = data.results.slice(0, 14);
 
   return (
     <main style={{ padding: "20px", maxWidth: "1200px", margin: "0 auto" }}>
-      <h1>Book Store</h1>
+      <h1>CodeOps Book Store</h1>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "20px", marginTop: "20px" }}>
-        {data.results.map((book: any) => {
+        {/* {data.results.map((book: any) => { */}
+        {limitedResults.map((book: any) => {
           const authorName = book.authors?.[0]?.name || "Unknown Author";
           const mockPrice = 15.99; 
           
